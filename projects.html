@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Projects - MorrisBuild Construction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 30px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+   header h1 {
+      color: rgb(148, 110, 28);
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f9d342;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after,
+    nav ul li a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .hamburger {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #1a1a1a;
+        width: 100%;
+        display: none;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+    }
+
+    .projects-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .projects-section h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .projects-section p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card .info {
+      padding: 20px;
+    }
+
+    .project-card .info h3 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .project-card .info p {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="./log1.jpg" alt="logo" style="height: 40px; margin-right: 10px;" />
+    <h1>MorrisBuild</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="projects-section">
+    <h2>Our Completed Projects</h2>
+    <p>Here are some of our successfully executed construction works.</p>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="./images/project1.jpg" alt="Modern House Project">
+        <div class="info">
+          <h3>Modern Mosque</h3>
+          <p>Located in Kumasi, this luxury Mosque features smart tech, high-end finishings, and landscape design.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./images/project7.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Residential 2-Story building</h3>
+          <p>Completed in 2023, this 2-Story serve as a good residential in Kumasi.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="./images/project3.jpg" alt="Renovated Building">
+        <div class="info">
+          <h3>Complete Building with 4 Bed Rooms</h3>
+          <p>A full interior and exterior bulding built in 2024 at Cape Coast.</p>
+        </div>
+      </div>
+           <div class="project-card">
+        <img src="./images/project4.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Residential 2-Story building with 4 Bedrooms</h3>
+          <p>Completed in 2023, this 2-Story serve as a good residential in Accra.</p>
+        </div>
+      </div>
+          <div class="project-card">
+        <img src="./images/project 5.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Residential 2-Story building with 5 Bebrooms</h3>
+          <p>Completed in 2024, this 2-Story serve as a good residential in Accra.</p>
+        </div>
+      </div>
+          <div class="project-card">
+        <img src="./images/project 6.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Residential 3-Story building with4 Bedrooms</h3>
+          <p>Completed in 2025,  serve as a good residential in Accra.</p>
+        </div>
+      </div>
+        <div class="project-card">
+        <img src="./images/project8.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Bricks building</h3>
+          <p>Completed in 2023, Located at Mampong.</p>
+        </div>
+      </div>
+          <div class="project-card">
+        <img src="./images/project 9.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern interior design</h3>
+          <p>2025 work at Kumasi.</p>
+        </div>
+      </div>
+        <div class="project-card">
+        <img src="./images/project10.jpg" alt="Office Complex">
+        <div class="info">
+          <h3> Interior design</h3>
+          <p> Any interior design you want.</p>
+        </div>
+      </div>
+          <div class="project-card">
+        <img src="./images/project 11.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern interior design</h3>
+        </div>
+      </div>
+         <div class="project-card">
+        <img src="./images/project12.jpg" alt="Office Complex">
+        <div class="info">
+          <h3>Modern Residential Bricks 2-Story building</h3>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

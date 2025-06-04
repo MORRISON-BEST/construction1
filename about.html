@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - MorrisBuild Construction</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e9f0f8;
+      color: #222;
+    }
+
+    header {
+      background-color: black;
+      padding: 20px 40px;
+      color: hsl(208, 90%, 32%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+     header h1 {
+      color: rgb(148, 110, 28);
+      margin: 0;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      font-weight: 600;
+      cursor: pointer;
+      color: #d1e3ff;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li:hover,
+    nav ul li.active {
+      color: #f9d342;
+    }
+
+    nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: none;
+        z-index: 999;
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: 60px auto 80px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px 50px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: #004080;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .about-section p {
+      line-height: 1.8;
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 28px;
+    }
+
+    .about-section h3 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #0059b3;
+      font-size: 28px;
+      font-weight: 700;
+      border-left: 5px solid #f9d342;
+      padding-left: 12px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .value-box {
+      background-color: #dbe9ff;
+      padding: 25px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 72, 153, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .value-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 72, 153, 0.25);
+    }
+
+    .value-box h4 {
+      margin-top: 0;
+      color: #003366;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding: 30px 25px;
+        margin: 40px 20px 60px;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .about-section h2 {
+        font-size: 24px;
+      }
+
+      .about-section h3 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="./log1.jpg" alt="logo" style="height: 40px; margin-right: 10px;" />
+      <h1>MorrisBuild</h1>
+    </div>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>About Us</h2>
+    <p><strong>MorrisBuild Construction Ltd.</strong> is a trusted name in Ghana’s building and infrastructure sector. With over a decade of experience, we have helped homeowners, businesses, and government agencies bring their visions to life — on time, within budget, and above expectations.</p>
+
+    <h3>Our Mission</h3>
+    <p>To deliver world-class construction services with professionalism, reliability, and integrity, improving the built environment across Ghana and beyond.</p>
+
+    <h3>Our Vision</h3>
+    <p>To be the leading construction partner of choice across Africa, known for innovation, excellence, and sustainable building solutions.</p>
+
+    <h3>Our Core Values</h3>
+    <div class="values">
+      <div class="value-box">
+        <h4>Quality</h4>
+        <p>We never compromise on excellence — from materials to workmanship.</p>
+      </div>
+      <div class="value-box">
+        <h4>Integrity</h4>
+        <p>We do what's right, not what's easy — and always keep our word.</p>
+      </div>
+      <div class="value-box">
+        <h4>Safety</h4>
+        <p>Our people and your property are always protected with the highest standards.</p>
+      </div>
+      <div class="value-box">
+        <h4>Innovation</h4>
+        <p>We adopt the best technologies and methods to deliver modern results.</p>
+      </div>
+    </div>
+
+    <h3>Meet Our Team</h3>
+    <p>MorrisBuild is powered by certified architects, engineers, and project managers. Our skilled workforce is trained to deliver superior results under the highest professional standards.</p>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        navMenu.classList.toggle('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
